@@ -23,6 +23,7 @@ nav{
 }
 
 .nav-bar{
+    height: 60px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -51,6 +52,10 @@ nav{
     .nav-bar ul{
         display: none;
     }
+    
+.nav-bar{
+    height: 50px;
+}
 }
 
 .header-container{
