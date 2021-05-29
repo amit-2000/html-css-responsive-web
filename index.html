@@ -16,24 +16,56 @@
 <body>
     <div class="header-container">
         <div class="box">
-            <h1>This is header</h1>
+            <nav class="nav-bar sticky">
+                <h3 id="logo">Logo !</h3>
+                <ul class="nav-links">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Carrer</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>This is header</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
-                veritatis inventore minus sed facere mollitia voluptatem?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
-                veritatis inventore minus sed facere mollitia voluptatem?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
-                veritatis inventore minus sed facere mollitia voluptatem?</p>
-            <p id="last-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
-                veritatis inventore minus sed facere mollitia voluptatem?</p>
-    
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
+                    veritatis inventore minus sed facere mollitia voluptatem?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
+                    veritatis inventore minus sed facere mollitia voluptatem?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas voluptate<br> ipsam,
+                    veritatis inventore minus sed facere mollitia voluptatem?</p>
+                <p id="last-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto voluptas
+                    voluptate<br> ipsam,
+                    veritatis inventore minus sed facere mollitia voluptatem?</p>
+            </div>
         </div>
     </div>
     <div class="container-img">
-       
+
         <div class="profile-img"></div>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, assumenda! Dolore labore recusandae fugiat ex laborum quis praesentium expedita consequuntur consequatur totam, repudiandae ullam, minus, laboriosam qui porro dolor corrupti assumenda accusantium sunt perferendis repellendus? Nostrum enim excepturi officiis eligendi architecto, laudantium doloremque quis impedit. Consequuntur, provident temporibus ab quia reprehenderit consectetur quae expedita, nulla fugiat ipsum, ut incidunt debitis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, assumenda! Dolore labore recusandae fugiat ex
+            laborum quis praesentium expedita consequuntur consequatur totam, repudiandae ullam, minus, laboriosam qui
+            porro dolor corrupti assumenda accusantium sunt perferendis repellendus? Nostrum enim excepturi officiis
+            eligendi architecto, laudantium doloremque quis impedit. Consequuntur, provident temporibus ab quia
+            reprehenderit consectetur quae expedita, nulla fugiat ipsum, ut incidunt debitis.</p>
     </div>
+    <script>
+        window.onscroll = function () {
+            myfunction()
+        };
+        // const styles = document.getElementsByClassName('sticky')
+        const navBar = document.getElementsByClassName('nav-bar')
+        const topOfNav = navBar.offsetTop;
+        function fixNav() {
+            if (window.scrollY >= topOfNav) {
+                document.body.classList.add('sticky')
+             
+            } else {
+                document.body.classList.remove('sticky');
+            }
+        }
+        window.addEventListener('scroll', fixNav);
+    </script>
 </body>
 
 </html>
